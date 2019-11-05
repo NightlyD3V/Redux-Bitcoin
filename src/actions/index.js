@@ -8,6 +8,7 @@ export const getData = () => dispatch => {
     dispatch({ type: FETCHING_DATA })
     axios.get('https://api.coinlore.com/api/tickers/')
     .then((res) => {
+        console.log(res);
         dispatch({
             type: SUCCESS,
             payload: res.data
